@@ -7,7 +7,16 @@ function search() {
     if (searchedItem == "") {
         return
     }
-    console.log(searchedItem)
     // clears the value
     document.getElementById("searchInput").value = "";
+    // puts the searched item in url to take to new page
+    document.location.href = `search.html#${searchedItem}`
+    loadSearch()
+}
+
+function loadSearch() {
+    // takes the searched item from url to a variable
+    searchedItem = document.location.href.slice(document.location.href.indexOf("#") + 1)
+    // sets the h1 as the searched item
+    document.getElementById("searchName").innerHTML = searchedItem
 }
