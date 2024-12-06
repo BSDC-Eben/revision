@@ -17,6 +17,7 @@ function search() {
 function loadSearch() {
     // takes the searched item from url to a variable
     searchedItem = document.location.href.slice(document.location.href.indexOf("#") + 1)
+    searchedItem = searchedItem.replaceAll("%20", " ")
     // sets the h1 as the searched item
     document.getElementById("searchName").innerHTML = searchedItem
 }
