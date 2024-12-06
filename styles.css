@@ -7,11 +7,32 @@ html, body {
     height: 100%;
 }
 
-h1 {
+.pageTitle {
     text-align: center;
+    margin-top: 20px;
+    text-transform: capitalize;
 }
 
 .topicCards {
+    margin-top: 100px;
     display: flex;
-    justify-items: center;
+    justify-content: center;
+}
+
+.singleCard {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.failedSect {
+    display: none;
+}
+
+.failedSearch {
+    color: gray;
+    text-align: center;
+}
+
+h3.failedSearch {
+    opacity: 60%;
 }

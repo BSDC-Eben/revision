@@ -1,5 +1,7 @@
 console.log("script running")
 
+topicList = ["topic1","topic2"]
+
 function search() {
     // grabs the value from the search input
     searchedItem = document.getElementById("searchInput").value;
@@ -19,5 +21,25 @@ function loadSearch() {
     searchedItem = document.location.href.slice(document.location.href.indexOf("#") + 1)
     searchedItem = searchedItem.replaceAll("%20", " ")
     // sets the h1 as the searched item
-    document.getElementById("searchName").innerHTML = searchedItem
+    document.getElementById("searchName").innerHTML = `Search:<br>${searchedItem}`
+    
+    document.getElementById("failedSearch").style.display = 'block'
+
+    for (let i = 0; i < topicList.length; i++) {
+
+        topicListStr = topicList[i]
+        searchedItem = searchedItem.toLowerCase()
+        searchedItem = searchedItem.trim()
+        searchedItem = searchedItem.replace(' ','')
+        console.log(searchedItem)
+
+        if (searchedItem == topicListStr) {
+            document.getElementById(topicListStr).style.display = "flex"
+            document.getElementById("failedSearch").style.display = 'none'
+        }
+
+        else {
+            document.getElementById(topicListStr).style.display = "none"
+        }
+    }
 }

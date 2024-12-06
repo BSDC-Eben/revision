@@ -27,7 +27,7 @@
                 <a class="nav-link" href="topicPage.html">Topics</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" style="user-select: none;">Search</a>
+                <a class="nav-link active" style="cursor: pointer;" style="user-select: none;">Search</a>
               </li>
             </ul>
             <form class="d-flex" role="search" action="javascript:search()">
@@ -38,9 +38,28 @@
         </div>
       </nav>
     <div>
-        <h1 id="searchName">search page</h1>
+        <h1 id="searchName" class="pageTitle">search page</h1>
         <h2 id="searchOutput"></h2>
     </div>
+    <section class="topicCards">
+      <div class="card singleCard" style="width: 18rem; display: none;" id="topic1">
+        <div class="card-body">
+          <h5 class="card-title">Topic 1</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card singleCard" style="width: 18rem; display: none;" id="topic2">
+        <div class="card-body">
+          <h5 class="card-title">Topic 2</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div id="failedSearch">
+        <h2 class="failedSearch">No Search Results...</h1>
+        <h3 class="failedSearch">(maybe try checking the spelling?)</h2>
+      </div>
      <!-- links the Java Script  -->
     <script src="../scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
