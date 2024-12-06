@@ -10,3 +10,8 @@ html, body {
 h1 {
     text-align: center;
 }
+
+.topicCards {
+    display: flex;
+    justify-items: center;
+}
